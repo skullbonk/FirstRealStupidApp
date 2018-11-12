@@ -19,15 +19,31 @@ public class ColorChangerViewController: UIViewController
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
+    
+    
+    var titleLabel: UILabel?
+    
 
-   
+    
+    
+ 
+    
+    
     @IBAction func colorClick(_ sender: UIButton)
     {
+        //FirstButton.setTitleColor
+        FirstButton.layer.cornerRadius = 10
+        FirstButton.clipsToBounds = true
+        //FirstButton.titleColor = myColor.createRandomColor()
         self.view.backgroundColor = myColor.createRandomColor()
         FirstButton.backgroundColor = myColor.createRandomColor()
+       // FirstButton.setTitleColor(UIColor?, for: UIControl.State) = myColor.createRandomColor()
+        FirstButton.tintColor = myColor.createRandomColor()
+        
     }
 }
     
+
 
 
 
